@@ -113,23 +113,18 @@ VBox {
     -fx-font-weight: bold;
 }
 
-.button{
-    -fx-background-color: "4d90fe";
-    -fx-text-fill: white;
-    -fx-font-size: 14pt;
-    -fx-font-family: "Segoe UI", sans-serif;
-    -fx-font-weight: bold;
-    -fx-padding: 10 20;
-    -fx-border-radius: 5;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
-}
-.button:hover{
+
+
+
+.menu-button:hover, .menu-button:pressed {
     -fx-background-color: #357ae8;
 }
-.button:pressed {
-    -fx-background-color: "2a5db0";
+.menu-button2:hover, .menu-button2:pressed {
+    -fx-background-color: #E78F16;
 }
-.menu-buttonbutton{
+
+
+.menu-button, .menu-button2 {
     -fx-background-color: "4d90fe";
     -fx-text-fill: white;
     -fx-font-size: 14pt;
@@ -138,5 +133,9 @@ VBox {
     -fx-padding: 10 20;
     -fx-border-radius: 5;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+.menu-button2 {
+    -fx-background-color:FFA500;
 }
 
