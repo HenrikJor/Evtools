@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="485.0" prefWidth="650.0" spacing="20" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.evtools2.HedgeCalcController">
+    <GridPane hgap="10" styleClass="input-grid" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label styleClass="input-label" text="Original Odds:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="oddsTextField" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label styleClass="input-label" text="Original Stake" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="stakeTextField" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label styleClass="input-label" text="Hedge Odds:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="hedgeOddsTextField" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    </GridPane>
+    <GridPane hgap="10" styleClass="results-grid" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label styleClass="input-label" text="Hedge Amount:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="hedgeAmountTextField" editable="false" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label styleClass="input-label" text="Total Profit:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="totalProfitTextField" editable="false" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    </GridPane>
+</VBox>
