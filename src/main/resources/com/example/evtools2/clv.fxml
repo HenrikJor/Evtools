@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="544.0" prefWidth="650.0" spacing="20" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.evtools2.clvController">
+
+    <HBox alignment="CENTER_LEFT" prefHeight="67.0" prefWidth="570.0">
+
+        <Button fx:id="backButton" mnemonicParsing="false" onAction="#openMainMenu" styleClass="back-button" text="Back ←" />
+
+    </HBox>
+
+    <GridPane hgap="10" prefHeight="148.0" prefWidth="570.0" styleClass="input-grid" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label styleClass="input-label" text="Your Odds" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="yourOddsTextField" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label styleClass="input-label" text="Correct Odds" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="correctOddsTextField" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    </GridPane>
+
+    <GridPane hgap="10" prefHeight="99.0" prefWidth="570.0" styleClass="results-grid" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label styleClass="input-label" text="CLV:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="ClvTextField" editable="false" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    </GridPane>
+
+</VBox>

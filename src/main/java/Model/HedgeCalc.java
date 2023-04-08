@@ -38,4 +38,18 @@ public class HedgeCalc {
         double payoutPercentage = 100 / totalImpliedProbability * 100;
         return payoutPercentage;
     }
+
+
+    /**
+     * Calculates the bookmaker's margin for a series of bets with given decimal odds.
+     *
+     * @param correctOdds The predicted or known odds corresponding to the true probability of an event
+     * @return The predicted or known value of a bet expressed as a percentage
+     */
+    public static double calculateCLV(double placedOdds, double correctOdds) {
+        // Calculates the percentage value of a bet based on the placed and correct odds
+        double clv = ((((placedOdds / correctOdds) - 1)) *100);
+        return clv;
+    }
+// method for converting odds types : 
 }

@@ -139,3 +139,16 @@ VBox {
     -fx-background-color:FFA500;
 }
 
+/* Back Button styles */
+.back-button {
+    -fx-background-color: #4d90fe;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+.back-button:hover, .back-button:pressed {
+    -fx-background-color: #357ae8;
+}
