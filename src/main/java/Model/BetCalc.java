@@ -41,8 +41,6 @@ public class BetCalc {
 
 
     /**
-     * Calculates the bookmaker's margin for a series of bets with given decimal odds.
-     *
      * @param correctOdds The predicted or known correct odds representing the true probability of an event
      * @return The predicted or known value of a bet expressed as a percentage
      */
