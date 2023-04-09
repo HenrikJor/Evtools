@@ -16,76 +16,27 @@ public class MainMenuController {
     public MainMenuController() {
     }
 
-    /*  old method opening a new window
-        @FXML
-        public void openHedgeCalculator(ActionEvent event) {
-            try {
-                Parent newRoot = FXMLLoader.load(getClass().getResource("/com/example/evtools2/hedgeCalc.fxml"));
-                Parent root = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root));
-                stage.show();
-            } catch (IOException var5) {
-                var5.printStackTrace();
-            }
 
-        }
-
-        public void openPayoutCalculator(ActionEvent event) {
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("/com/example/evtools2/payout.fxml"));
-                Parent root = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root));
-                stage.show();
-            } catch (IOException var5) {
-                var5.printStackTrace();
-            }
-        }
-    */
     public void openHedgeCalculator(ActionEvent event) {
-        try {
-            // Load the new FXML file
-            Parent newRoot = FXMLLoader.load(getClass().getResource("/com/example/evtools2/hedgeCalc.fxml"));
-
-            // Get the current scene and window (stage)
-            Scene currentScene = ((Node) event.getSource()).getScene();
-            Stage currentStage = (Stage) currentScene.getWindow();
-
-            // Set the new root as the scene's root
-            currentScene.setRoot(newRoot);
-
-            // Set the new scene on the stage
-            currentStage.setScene(currentScene);
-            currentStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/com/example/evtools2/hedgeCalc.fxml");
     }
 
     public void openPayoutCalculator(ActionEvent event) {
-        try {
-            // Load the new FXML file
-            Parent newRoot = FXMLLoader.load(getClass().getResource("/com/example/evtools2/payout.fxml"));
-
-            // Get the current scene and window (stage)
-            Scene currentScene = ((Node) event.getSource()).getScene();
-            Stage currentStage = (Stage) currentScene.getWindow();
-
-            // Set the new root as the scene's root
-            currentScene.setRoot(newRoot);
-
-            // Set the new scene on the stage
-            currentStage.setScene(currentScene);
-            currentStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        changeScene(event, "/com/example/evtools2/payout.fxml");
     }
+
     public void openClvCalculator(ActionEvent event) {
+        changeScene(event, "/com/example/evtools2/clv.fxml");
+    }
+
+    public void openConverter(ActionEvent event) {
+        changeScene(event, "/com/example/evtools2/converter.fxml");
+    }
+
+    private void changeScene(ActionEvent event, String fxmlPath) {
         try {
             // Load the new FXML file
-            Parent newRoot = FXMLLoader.load(getClass().getResource("/com/example/evtools2/clv.fxml"));
+            Parent newRoot = FXMLLoader.load(getClass().getResource(fxmlPath));
 
             // Get the current scene and window (stage)
             Scene currentScene = ((Node) event.getSource()).getScene();
@@ -102,4 +53,3 @@ public class MainMenuController {
         }
     }
 }
-

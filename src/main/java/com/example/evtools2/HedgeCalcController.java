@@ -1,7 +1,7 @@
 package com.example.evtools2;
 
 
-import Model.HedgeCalc;
+import Model.BetCalc;
 import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -15,7 +15,7 @@ import java.io.IOException;
 
 
 public class HedgeCalcController {
-    private HedgeCalc hedge = new HedgeCalc();
+    private BetCalc hedge = new BetCalc();
     @FXML
     private TextField oddsTextField;
     @FXML
@@ -36,10 +36,10 @@ public class HedgeCalcController {
             odds = Double.parseDouble(this.oddsTextField.getText());
             stake = Double.parseDouble(this.stakeTextField.getText());
             hedgeodds = Double.parseDouble(this.hedgeOddsTextField.getText());
-            HedgeCalc var10000 = this.hedge;
-            double hedgeAmount = HedgeCalc.hedgeBet(stake, odds, hedgeodds).getHedgeBetAmount();
+            BetCalc var10000 = this.hedge;
+            double hedgeAmount = BetCalc.hedgeBet(stake, odds, hedgeodds).getHedgeBetAmount();
             var10000 = this.hedge;
-            double totalProfit = HedgeCalc.hedgeBet(stake, odds, hedgeodds).getTotalProfit();
+            double totalProfit = BetCalc.hedgeBet(stake, odds, hedgeodds).getTotalProfit();
             this.hedgeAmountTextField.setText(String.format("%.2f", hedgeAmount));
             this.totalProfitTextField.setText(String.format("%.2f", totalProfit));
         } catch (NumberFormatException e) {

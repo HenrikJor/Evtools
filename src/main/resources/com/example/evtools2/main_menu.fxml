@@ -4,8 +4,11 @@
 <?import javafx.scene.layout.*?>
 
 <VBox alignment="CENTER" prefHeight="316.0" prefWidth="320.0" spacing="10" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.evtools2.MainMenuController">
+     <Label prefHeight="26.0" prefWidth="126.0" snapToPixel="false" styleClass="menu-title" text="    EV TOOLS" />
+    <AnchorPane />
     <Button onAction="#openHedgeCalculator" prefHeight="43.0" prefWidth="213.0" styleClass="menu-button" text="Hedge Calculator" />
    <Button mnemonicParsing="false" onAction="#openPayoutCalculator" prefHeight="43.0" prefWidth="213.0" styleClass="menu-button2" text="Payout Calculator" />
-    <Button mnemonicParsing="false" onAction="#openClvCalculator" prefHeight="43.0" prefWidth="213.0" styleClass="menu-button2" text="CLV" />
+    <Button mnemonicParsing="false" onAction="#openClvCalculator" prefHeight="43.0" prefWidth="213.0" styleClass="menu-button3" text="CLV" />
+    <Button mnemonicParsing="false" onAction="#openConverter" prefHeight="43.0" prefWidth="213.0" styleClass="menu-button4" text="Odds Converter" />
     <!-- Add more buttons for additional tools here -->
 </VBox>

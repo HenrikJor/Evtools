@@ -1,6 +1,6 @@
 package com.example.evtools2;
 
-import Model.HedgeCalc;
+import Model.BetCalc;
 import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,7 +30,7 @@ public class clvController {
     @FXML
     private TextField ClvTextField;
 
-    private HedgeCalc hedgeCalc = new HedgeCalc();
+    private BetCalc betCalc = new BetCalc();
 
     public void openMainMenu(ActionEvent event) {
         try {
@@ -56,7 +56,7 @@ public class clvController {
         try {
             double odds = Double.parseDouble(yourOddsTextField.getText());
             double correctOdds = Double.parseDouble(correctOddsTextField.getText());
-            double clv = hedgeCalc.calculateCLV(odds, correctOdds);
+            double clv = betCalc.calculateCLV(odds, correctOdds);
             ClvTextField.setText(String.format("%.2f", clv));
         } catch (NumberFormatException e) {
             // Handle the exception if the input is not a number

@@ -119,12 +119,20 @@ VBox {
 .menu-button:hover, .menu-button:pressed {
     -fx-background-color: #357ae8;
 }
+
 .menu-button2:hover, .menu-button2:pressed {
+    -fx-background-color: #8F64FF;
+}
+.menu-button3:hover, .menu-button3:pressed {
     -fx-background-color: #E78F16;
 }
 
+.menu-button4:hover, .menu-button4:pressed {
+    -fx-background-color: #E75581;
+}
 
-.menu-button, .menu-button2 {
+
+.menu-button, .menu-button2, .menu-button3, .menu-button4 {
     -fx-background-color: "4d90fe";
     -fx-text-fill: white;
     -fx-font-size: 14pt;
@@ -136,7 +144,14 @@ VBox {
 }
 
 .menu-button2 {
-    -fx-background-color:FFA500;
+    -fx-background-color:#A77AFE ;
+}
+
+.menu-button3 {
+    -fx-background-color:#FFA500 ;
+}
+.menu-button4 {
+    -fx-background-color: #FF6B6B;
 }
 
 /* Back Button styles */
@@ -151,4 +166,10 @@ VBox {
 
 .back-button:hover, .back-button:pressed {
     -fx-background-color: #357ae8;
+}
+.menu-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-font-family: "Helvetica Neue", Arial, sans-serif;
 }
