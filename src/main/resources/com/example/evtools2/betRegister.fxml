@@ -34,6 +34,8 @@
         <TextField fx:id="oddsTextField" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
         <Button fx:id="addBetButton" onAction="#addBet" styleClass="menu-button" text="Add Bet" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+               <TextField styleClass="output-field" fx:id="returnTextField" prefHeight="42.0" prefWidth="232.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+               <Label styleClass="input-label" fx:id="returnLabel" text="ROI:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                <columnConstraints>
                   <ColumnConstraints />
                   <ColumnConstraints />
@@ -61,7 +63,7 @@
     <HBox spacing="10">
         <Button fx:id="winButton" onAction="#handleSettleButton" styleClass="win-button" text="Settle as Win" />
         <Button fx:id="lossButton" onAction="#handleSettleButton" styleClass="loss-button" text="Settle as Loss" />
-        <Button fx:id="voidButton"  onAction="#handleSettleButton" styleClass="void-button" text="Settle as Void" />
+        <Button fx:id="voidButton" onAction="#handleSettleButton" styleClass="void-button" text="Settle as Void" />
     </HBox>
 </VBox>
         </VBox>

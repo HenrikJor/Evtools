@@ -98,12 +98,13 @@ VBox {
 
 /* Output TextField styles */
 .output-field {
-    -fx-background-color: #e5e5e5;
-    -fx-border-width: 0;
+    -rgba(93, 138, 168, 0.1);
+    -fx-border-color: #9fdf9f;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
     -fx-padding: 10;
-    -fx-text-fill: #555;
+    -fx-text-fill: #007700;
     -fx-font-weight: bold;
-    -fx-font-style: normal;
 }
 /* Output Label styles */
 .output-label {

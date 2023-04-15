@@ -36,6 +36,8 @@ public class betRegisterController {
     private TextField oddsTextField;
 
     @FXML
+    private TextField returnTextField;
+    @FXML
     private Button addBetButton;
 
     @FXML
@@ -76,6 +78,7 @@ public class betRegisterController {
         stakeColumn.setCellValueFactory(new PropertyValueFactory<>("stake"));
         oddsColumn.setCellValueFactory(new PropertyValueFactory<>("odds"));
         outcomeColumn.setCellValueFactory(new PropertyValueFactory<>("outcomeString"));
+        returnTextField.setText(String.valueOf(betRegister.calculateReturn()));
 
         betTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
@@ -146,5 +149,6 @@ public class betRegisterController {
 
         // Refresh the table view to show the updated outcome
         betTableView.refresh();
+        returnTextField.setText(String.valueOf(betRegister.calculateReturn()));
     }
     }

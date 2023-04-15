@@ -47,7 +47,7 @@ public double calculateReturn() {
                 turnover += bet.getStake();
 
             }
-                
+
                 }
     returnOnInvestmentPercentage = netProfit / turnover;
     return returnOnInvestmentPercentage;
