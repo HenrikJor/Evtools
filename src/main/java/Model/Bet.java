@@ -7,7 +7,7 @@ public class Bet {
     private String bookie;
     private double stake;
     private double odds;
-    private enum BetOutcome {
+    public enum BetOutcome {
         UNSETTLED,WIN,LOSS,VOID
     }
     private BetOutcome outcome;
@@ -67,4 +67,9 @@ public class Bet {
     public void setOutcome(BetOutcome outcome) {
         this.outcome = outcome;
     }
+
+    public String getOutcomeString() {
+        return outcome.toString();
+    }
+
 }

@@ -5,6 +5,14 @@ import javafx.collections.ObservableList;
 
 
 public class BetRegister {
+    public ObservableList<Bet> getBets() {
+        return bets;
+    }
+
+    public void setBets(ObservableList<Bet> bets) {
+        this.bets = bets;
+    }
+
     private ObservableList<Bet> bets;
 
     public BetRegister() {

@@ -7,7 +7,7 @@
 <BorderPane stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.evtools2.betRegisterController">
     <top>
         <HBox alignment="CENTER_LEFT" spacing="10">
-            <Button styleClass="back-button" text="Back" />
+            <Button fx:id="backButton" onAction="#openMainMenu" styleClass="back-button" text="Back" />
             <Label styleClass="menu-title" text="Sports Bet Tracker" />
             <Region HBox.hgrow="ALWAYS" />
             <Button styleClass="menu-button" text="Statistics" />
@@ -59,9 +59,9 @@
         </columns>
     </TableView>
     <HBox spacing="10">
-        <Button fx:id="settleWinButton" styleClass="win-button" text="Settle as Win" />
-        <Button fx:id="settleLossButton" styleClass="loss-button" text="Settle as Loss" />
-        <Button fx:id="settleVoidButton" styleClass="void-button" text="Settle as Void" />
+        <Button fx:id="winButton" onAction="#handleSettleButton" styleClass="win-button" text="Settle as Win" />
+        <Button fx:id="lossButton" onAction="#handleSettleButton" styleClass="loss-button" text="Settle as Loss" />
+        <Button fx:id="voidButton"  onAction="#handleSettleButton" styleClass="void-button" text="Settle as Void" />
     </HBox>
 </VBox>
         </VBox>
