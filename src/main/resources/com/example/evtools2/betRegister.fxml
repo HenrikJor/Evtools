@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.evtools2.betRegisterController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button styleClass="back-button" text="Back" />
+            <Label styleClass="menu-title" text="Sports Bet Tracker" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button styleClass="menu-button" text="Statistics" />
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="10">
+<VBox alignment="TOP_CENTER" spacing="10">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <Label text="Add New Bet" />
+    <GridPane hgap="10" styleClass="input-grid" vgap="10">
+        <Label styleClass="input-label" text="Event:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label styleClass="input-label" text="Selection:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Label styleClass="input-label" text="Bookie:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label styleClass="input-label" text="Stake:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label styleClass="input-label" text="Odds:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+        <TextField fx:id="eventTextField" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="selectionTextField" styleClass="input-field" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <TextField fx:id="bookieTextField" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="stakeTextField" styleClass="input-field" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <TextField fx:id="oddsTextField" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Button fx:id="addBetButton" onAction="#addBet" styleClass="menu-button" text="Add Bet" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+    </GridPane>
+    <Label text="Unsettled Bets" />
+    <TableView fx:id="betTableView" styleClass="table-view" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="eventColumn" text="Event" />
+            <TableColumn fx:id="selectionColumn" text="Selection" />
+            <TableColumn fx:id="bookieColumn" text="Bookie" />
+            <TableColumn fx:id="stakeColumn" text="Stake" />
+            <TableColumn fx:id="oddsColumn" text="Odds" />
+            <TableColumn fx:id="outcomeColumn" text="Outcome" />
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <Button fx:id="settleWinButton" styleClass="win-button" text="Settle as Win" />
+        <Button fx:id="settleLossButton" styleClass="loss-button" text="Settle as Loss" />
+        <Button fx:id="settleVoidButton" styleClass="void-button" text="Settle as Void" />
+    </HBox>
+</VBox>
+        </VBox>
+    </center>
+</BorderPane>

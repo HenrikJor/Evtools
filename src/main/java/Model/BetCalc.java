@@ -85,4 +85,8 @@ public class BetCalc {
         String[] parts = fractionalOdds.split("/");
         return 1 + (Double.parseDouble(parts[0]) / Double.parseDouble(parts[1]));
     }
+
+    //method for asian handicaping
+
+
 }

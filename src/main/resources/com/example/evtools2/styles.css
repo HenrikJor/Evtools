@@ -173,3 +173,79 @@ VBox {
     -fx-text-fill: #333;
     -fx-font-family: "Helvetica Neue", Arial, sans-serif;
 }
+
+/* General styles */
+* {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* TableView styles */
+.table-view {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 26;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #555;
+    -fx-font-weight: normal;
+    -fx-padding: 8 8 8 8;
+    -fx-border-color: transparent transparent transparent transparent;
+    -fx-background-color: transparent;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #d3d3d3 transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: rgba(77, 144, 254, 0.3);
+    -fx-border-color: transparent transparent #d3d3d3 transparent;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+}
+
+.table-view .table-row-cell:odd:selected {
+    -fx-background-color: rgba(77, 144, 254, 0.3);
+}
+/* Win Button */
+.win-button {
+    -fx-background-color: #4CAF50;
+}
+
+.win-button:hover, .win-button:pressed {
+    -fx-background-color: #3E8E41;
+}
+
+/* Loss Button */
+.loss-button {
+    -fx-background-color: #F44336;
+}
+
+.loss-button:hover, .loss-button:pressed {
+    -fx-background-color: #D32F2F;
+}
+
+/* Void Button */
+.void-button {
+    -fx-background-color: #9E9E9E;
+}
+
+.void-button:hover, .void-button:pressed {
+    -fx-background-color: #757575;
+}
+

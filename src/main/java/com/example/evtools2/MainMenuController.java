@@ -33,7 +33,9 @@ public class MainMenuController {
         changeScene(event, "/com/example/evtools2/converter.fxml");
     }
 
-    private void changeScene(ActionEvent event, String fxmlPath) {
+    public void openBetRegister(ActionEvent event)  {changeScene(event, "/com/example/evtools2/betRegister.fxml");}
+
+   public void changeScene(ActionEvent event, String fxmlPath) {
         try {
             // Load the new FXML file
             Parent newRoot = FXMLLoader.load(getClass().getResource(fxmlPath));
