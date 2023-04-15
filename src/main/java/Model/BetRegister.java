@@ -26,4 +26,32 @@ public class BetRegister {
     public void removeBet(Bet bet) {
         bets.remove(bet);
     }
-}
+
+public double calculateReturn() {
+       double returnOnInvestmentPercentage = 0;
+       double netProfit = 0;
+       double turnover = 0;
+
+        for (Bet bet : bets){
+            if (bet.getOutcome() == Bet.BetOutcome.WIN) {
+                netProfit += bet.getStake() * (bet.getOdds() - 1);
+                turnover += bet.getStake();
+            }
+
+                else if (bet.getOutcome() == Bet.BetOutcome.LOSS) {
+                netProfit -= bet.getStake();
+                turnover += bet.getStake();
+            }
+
+                else {
+                turnover += bet.getStake();
+
+            }
+                
+                }
+    returnOnInvestmentPercentage = netProfit / turnover;
+    return returnOnInvestmentPercentage;
+            }
+        }
+
+
